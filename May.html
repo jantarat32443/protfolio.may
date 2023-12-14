@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: wheat;
+        }
+
+        #home {
+            background-color: #F6F3ED;
+            overflow: auto;
+            padding: 3em;
+            position: relative;
+        }
+
+        .contain {
+            position: absolute;
+            left: 45%;
+        }
+
+        .contain h1 {
+            font-size: 400%;
+            font-weight: lighter;
+        }
+
+        .contain .name {
+            font-weight: bold;
+        }
+
+        .contain p {
+            line-height: 2em;
+            font-size: 25px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        #home img {
+            border-radius: 50%;
+            width: 35%;
+            height: auto;
+            float: left;
+        }
+
+        #home .button {
+            background-color: #917f62;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            font-size: 30px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 5%;
+            left: 85%;
+        }
+
+        #aboutme {
+            background-color: #efecda;
+            overflow: auto;
+            padding: 3em;
+            padding-bottom: 5em;
+            position: relative;
+        }
+
+        .contain2 {
+            text-align: left;
+            margin-left: 150px;
+        }
+
+        .contain2 h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 350%;
+            text-decoration: underline;
+        }
+
+        .contain2 p {
+            line-height: 2em;
+            font-size: 25px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        #aboutme img {
+            margin-top: 5%;
+            border-radius: 50%;
+            width: 35%;
+            height: auto;
+            float: right;
+        }
+
+        #aboutme .button {
+            background-color: #917f62;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            font-size: 30px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 3%;
+            right: 75%;
+        }
+
+        #education {
+            text-align: center;
+            background-color: #F6F3ED;
+            overflow: auto;
+            padding: 3em;
+            position: relative;
+        }
+
+        #education p {
+            font-size: 25px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        #education h1 {
+            font-weight: bold;
+            font-size: 350%;
+            text-decoration: underline;
+        }
+
+        .kinder h3 {
+            background-color: #f0dcba;
+            padding: 5px;
+            border: 2px solid;
+            font-size: 30px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .pri h3 {
+            background-color: #f0dcba;
+            padding: 5px;
+            border: 2px solid;
+            font-size: 30px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .mid h3 {
+            background-color: #f0dcba;
+            padding: 5px;
+            border: 2px solid;
+            font-size: 30px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .high h3 {
+            background-color: #f0dcba;
+            padding: 5px;
+            border: 2px solid;
+            font-size: 30px;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        #education .button {
+            background-color: #917f62;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            font-size: 30px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 3%;
+            left: 85%;
+        }
+
+        nav {
+            font-family: verdana, sans-serif;
+            background-color: #783F27;
+
+        }
+
+        nav ul li a:link,
+        nav ul li a:visited {
+            color: #F9AB33;
+        }
+
+        nav ul li a:focus,
+        nav ul li a:hover,
+        nav ul li a:active {
+            color: #fff;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            display: block;
+            border: 1px solid;
+            border-radius: 0.5em;
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        nav ul li {
+            font-size: .8em;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+        }
+
+        #skill {
+            border: 3px solid #783F27;
+            display: flex;
+            align-items: stretch;
+            flex-flow: row wrap;
+            justify-content: center;
+            padding-bottom: 100px;
+            position: relative;
+
+        }
+
+        h2,
+        p {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        section {
+            background: #F6F3ED;
+            margin: 10px;
+            padding: 20px;
+            border: 1px dotted maroon;
+            width: 240px;
+            display: flex;
+            flex-direction: column;
+            flex: auto;
+        }
+
+        #skill .title {
+            background-color: #783F27;
+            color: #F9AB33;
+            line-height: 4em;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        .block {
+            font-weight: bold;
+            background: #F9AB33;
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .photo {
+            order: -1;
+        }
+
+        #skill img {
+            width: 100%;
+        }
+
+        #skill .button {
+            background-color: #917f62;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            font-size: 30px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 3%;
+            right: 45%;
+        }
+
+        #contact {
+            background-color: #efecda;
+            position: relative;
+            padding-bottom:100px ;
+            overflow: auto;
+        }
+
+        #contact .title {
+            background-color: #783F27;
+            color: #F9AB33;
+            font-size: 50px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .send {
+            font-size: 20px;
+            line-height: 2em;
+            float: left;
+            font-weight: bold;
+        }
+        .send ul{
+            line-height: 3em;
+        }
+
+        input {
+            font-size: 30px;
+        }
+
+        textarea {
+            font-size: 18px;
+        }
+        .send .button {
+            background-color: #917f62;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            font-size: 20px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 25%;
+            left: 3%;
+            margin-top: 150px;
+        }
+        .social{
+            margin-left: 900px;
+            font-family: 'Kanit', sans-serif;
+            background-color: #e9dcc6;
+            padding: 1em;
+            margin-right: 50px;
+            border: dotted;
+        }
+        .social h2{
+            text-align: center;
+            font-size: 30px;
+        }
+        .social h3{
+            text-decoration: underline;
+        }
+        .social a{
+            text-decoration: none;
+            color: black;
+        }
+        #contact img{
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav">
+        <ul class="container">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <article id="home">
+        <img src="./images/Jantarat.jpg" alt="Me">
+        <div class="contain">
+            <h1>Hi. I'm <span class="name">Jantarat Sanglao</span>.</h1>
+            <p>สวัสดีค่ะ ฉันชื่อนางสาว จันทรัศม์ แสงเหลา <br>ปัจจุบันกำลังศึกษาในระดับปริญญาตรี
+                ที่มหาวิทยาลัยพระจอมเกล้าธนบุรี
+                <br>คณะวิศวกรรมศาสตร์ สาขาคอมพิวเตอร์
+            </p>
+        </div>
+        <a href="#aboutme" class="button large scrolly">About Me</a>
+    </article>
+
+    <article id="aboutme">
+        <img src="./images/May.jpg" alt="Me">
+        <div class="contain2">
+            <h1> ABOUT ME </h1>
+            <p>ชื่อ : จันทรัศม์ นามสกุล : เเสงเหลา ชื่อเล่น : เม
+                <br>อายุ 18 ปี เกิดวันที่ : 8 พฤศจิกายน พ.ศ. 2547
+                <br>สัญชาติ : ไทย เชื้อชาติ : ไทย ศาสนา :พุทธ
+                <br>วิชาที่ชอบ : คณิตศาสตร์ คอมพิวเตอร์ ภาษาอังกฤษ
+                <br>งานอดิเรก : อ่านหนังสือพัฒนาตนเอง ออกกำลังกาย ฟังเพลง
+                <br>คติประจำใจ : อย่าใช้ชีวิตด้วยความรู้สึกของเมื่อวาน
+                <br>ความสามารถพิเศษ : เล่นไวโอลิน เล่นเเบดมินตัน
+            </p>
+        </div>
+        <a href="#education" class="button large scrolly">Education</a>
+    </article>
+
+    <article id="education">
+        <h1>EDUCATION</h1>
+        <div class="kinder">
+            <h3>ระดับชั้นอนุบาล 1-3</h3>
+            <p>โรงเรียนสารสาสน์วิเทศธนบุรี</p>
+        </div>
+        <div class="pri">
+            <h3>ระดับชั้นประถมศึกษาปีที่ 1-6</h3>
+            <p>โรงเรียนสารสาสน์วิเทศธนบุรี</p>
+        </div>
+        <div class="mid">
+            <h3>ระดับชั้นมัธยมศึกษาปีที่ 1-3</h3>
+            <p>โรงเรียนยอเเซฟอุปถัมภ์</p>
+        </div>
+        <div class="high">
+            <h3>ระดับชั้นมัธยมศึกษาปีที่ 4-6</h3>
+            <p>โรงเรียนยอเเซฟอุปถัมภ์</p>
+        </div>
+        <a href="#skill" class="button large scrolly">Skill</a>
+    </article>
+
+    <article id="skill">
+        <section class="title">
+            <h1>SKILL</h1>
+        </section>
+
+        <section class="cprogram">
+            <h2>ด้านการเขียนโปรแกรม</h2>
+            <p class="info">สามารถเขียนโปรแกรมภาษาC ได้อย่างมีประสิทธิภาพ</p>
+            <p class="photo"><img src="./images/c.png" alt="clang"></p>
+            <p class="block">C Programming</p>
+        </section>
+
+        <section class="lang">
+            <h2>ด้านภาษาต่างประเทศ</h2>
+            <p class="info">สามารถพูด อ่าน เขียนภาษาอังกฤษได้อย่างคล่องแคล่ว </p>
+            <p class="photo"><img src="./images/eng.png" alt="eng"></p>
+            <p class="block">English Language</p>
+        </section>
+
+        <section class="math">
+            <h2>ด้านการคำนวณ</h2>
+            <p class="info">มีความสามารถในด้านการคำนวณทางคณิตศาสตร์เป็นอย่างดี</p>
+            <p class="photo"><img src="./images/math.png" alt=""></p>
+            <p class="block">Mathematics</p>
+        </section>
+        <a href="#contact" class="button large scrolly">Contact</a>
+
+    </article>
+
+    <article id="contact">
+        <h1 class="title">CONTACT</h1>
+        <div class="send">
+            <ul>
+                <li>
+                    <label for="name">Name :</label>
+                    <input type="text" name="name" id="name">
+                </li>
+                <li>
+                    <label for="email">Email Address :</label>
+                    <input type="email" name="email" id="email">
+                </li>
+                <li>
+                    <label for="phone">Telephone Number :</label>
+                    <input type="tel" name="phone" id="phone">
+                </li>
+                <li>
+                    <label for="story">Message :</label>
+                    <br>
+                    <textarea rows="4" cols="60" name="story" id="story"
+                        placeholder="no more than 60 characters long."></textarea>
+                </li>
+            </ul>
+            <a href="#home" class="button large scrolly">Send Message</a>
+
+             </div>
+        <div class="social">
+            <h2>SOCIAL MEDIA</h2>
+            <div class="address">
+                <h3>Address <img src="./images/address.png" alt="address"></h3>
+                <p>48/5หมู่4 ต.คลองโยง อ.พุทธมณฑล จ.นครปฐม 73170</p>
+            </div>
+            <div class="email">
+                <h3>Email <img src="./images/email.png" alt="email"></h3>
+                <p>jantarat32443@gmail.com</p>
+            </div>
+            <div class="tel">
+                <h3>Telephone <img src="./images/tel.png" alt="tel"></h3>
+                <p>088-8683697</p>
+            </div>
+            <div class="ins">
+                <h3>Instagram <img src="./images/Instagram_icon.png" alt="ins"></h3>
+                <a href="https://instagram.com/0ymiy?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr">@0ymiy [Click here]</a>
+            </div>
+        </div>
+    </article>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
